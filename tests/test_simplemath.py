@@ -16,5 +16,6 @@ from main.simplemath import f_me
     ("abc", None),
     (None, None)
 ])
+
 def test_f_me(x, expected):
     assert f_me(x) == expected
