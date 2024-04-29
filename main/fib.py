@@ -1,16 +1,12 @@
-def fib(n):
-    if not isinstance(n, int) or n < 0:
-        return None
-    if n == 0:
-        return None
-    elif n == 1:
-        return 0
-    elif n == 2:
-        return 1
-    else:
-        a = 0
-        b = 1
-        for _ in range(2, n):
-            a, b = b, a + b
-        return b
+def fibonacci(n):
+  if n == 1 or n == 2:
+    return 1
+  else:
+    return fibonacci(n-1) + fibonacci(n-2)
 
+num_terms = int(input("Enter the number of terms: "))
+
+
+print("Fibonacci Sequence: ")
+for i in range(1, num_terms + 1):
+  print(fibonacci(i), end=" ")
